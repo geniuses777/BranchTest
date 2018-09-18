@@ -1,0 +1,5 @@
+<h1>전체 목록입니다.</h1>
+<% @all.each do |p| %>
+<h3><%=p.id%>번 <a href="/geshipans/show/<%=p.id%>"><%=p.title%></a>&nbsp<a href="/geshipans/update/<%=p.id%>" data-confirm="정말 수정하시겠습니까?">[수정하기]</a>&nbsp<a href="/geshipans/delete/<%=p.id%>" data-method="post" confirm="정말 삭제하시겠습니까?">[삭제하기]</a></h3>
+<%end%>
+<a href="/geshipans/create">[글 작성하기]</a>
